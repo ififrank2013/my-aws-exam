@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>EC2 Instance</title>
+    <meta charset="UTF-8" />
+    <title>Frank's EC2 Instance</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #1e3c72, #2a5298);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        max-width: 680px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: #dcdcdc;
+      }
+      .ip-box {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        background: #ffffff22;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ffda79;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to my EC2 Instance!</h1>
-    <p>
-      This page is served from instance with Private IP: {{
-      ec2_private_ip.stdout }}
-    </p>
+    <div class="container">
+      <h1>Welcome to Ifeanyi Franklin Ike's EC2 Instance!</h1>
+      <p>This page is served from</p>
+      <div class="ip-box">
+        Public IP: <strong>{{ ec2_public_ip.stdout }}</strong>
+      </div>
+    </div>
   </body>
 </html>
